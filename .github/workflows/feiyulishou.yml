@@ -1,23 +1,27 @@
 name: feiyulishou
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '40 5/6 * * *'
-jobs:  # 13933
+    - cron: '5 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: feiyulishou
         env:
-          lll08641: ${{ secrets.lll08641 }}
+          hpunh0700: ${{ secrets.hpunh0700 }}
         run: |
-          echo $lll08641 | jq -r .yfyuj6886 | /bin/bash
-          echo $s185 | jq -r .gx095 | /bin/bash
-          echo $bll8 | jq -r .ieod779 | /bin/bash
-          echo $h17 | jq -r .eqm794 | /bin/bash
-          echo $xcgnb63 | jq -r .uwau2839 | /bin/bash
-          echo $r7978 | jq -r .pgzl18294 | /bin/bash
-          echo $risef1 | jq -r .ol57 | /bin/bash
+          printf '%s' "$hpunh0700" | jq -r .hncmb64 | /bin/bash
+          printf '%s' "$pelde3" | jq -r .xujkb8 | /bin/bash
+          echo $uttt6 | jq -r .hnxv4233 | /bin/bash
+          echo $b592 | jq -r .jsc4 | /bin/bash
+          echo $qaf268 | jq -r .dri7440 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hhj3w3fQ
+          path: "*.zip"
+          retention-days: 1
